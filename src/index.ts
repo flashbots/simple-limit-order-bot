@@ -1,6 +1,8 @@
 import MevShareClient, { IPendingTransaction } from '@flashbots/mev-share-client'
 import { Contract, JsonRpcProvider, Wallet } from 'ethers'
 import { ERC20_ABI, UNISWAP_FACTORY_ABI, UNISWAP_V2_ABI } from './abi'
+import dotenv from "dotenv"
+dotenv.config()
 
 const RPC_URL = process.env.RPC_URL || 'http://127.0.0.1:8545'
 const EXECUTOR_KEY = process.env.EXECUTOR_KEY || Wallet.createRandom().privateKey
